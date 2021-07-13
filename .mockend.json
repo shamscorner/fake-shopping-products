@@ -1,40 +1,30 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Android Smartwatch",
-            "imageUrl": "https://unsplash.com/photos/2cFZ_FB08UM",
-            "price": "250"
-        },
-        {
-            "id": 2,
-            "name": "Awesome Headphone",
-            "imageUrl": "https://unsplash.com/photos/PDX_a_82obo",
-            "price": "196"
-        },
-        {
-            "id": 3,
-            "name": "Nike Shoe Sports version",
-            "imageUrl": "https://unsplash.com/photos/164_6wVEHfI",
-            "price": "350"
-        },
-        {
-            "id": 4,
-            "name": "Ikea Fake plant",
-            "imageUrl": "https://unsplash.com/photos/miziNqvJx5M",
-            "price": "30"
-        },
-        {
-            "id": 5,
-            "name": "Retro Polaroid Camera",
-            "imageUrl": "https://unsplash.com/photos/KsLPTsYaqIQ",
-            "price": "100"
-        },
-        {
-            "id": 6,
-            "name": "House Blend Coffee",
-            "imageUrl": "https://unsplash.com/photos/rsnzc-8dVs0",
-            "price": "12"
-        }
-    ]
+  "Post": {
+    "title": {
+      "string": {}
+    },
+    "views": {
+      "int": { "min": 0, "max": 9000 }
+    },
+    "published": {
+      "boolean": {}
+    },
+    "createdAt": {
+      "dateTime": {
+        "min": "2010-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
+      }
+    },
+    "comments": {
+      "hasMany": "Comment"
+    }
+  },
+  "Comment": {
+    "body": {
+      "string": {}
+    },
+    "post": {
+      "belongsTo": "Post"
+    }
+  }
 }
